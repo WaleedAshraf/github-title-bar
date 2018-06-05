@@ -1,0 +1,28 @@
+{
+  "name": "GitHub Title Bar",
+  "version": "1.0",
+  "description": "Static Title Bar for GitHub Issues.",
+  "manifest_version": 2,
+  "permissions": [
+    "https://github.com/*"
+  ],
+  "icons": {
+    "16": "github-16.png",
+    "48": "github-48.png",
+    "128": "github-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/issues/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
