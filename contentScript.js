@@ -1,5 +1,6 @@
 
 var regex = /(https:\/\/github.com\/).*?(issues).*?(\d)/
+
 if (regex.test(window.location.href)) {
   window.onload = function () {
 
@@ -14,11 +15,28 @@ if (regex.test(window.location.href)) {
       document.getElementsByClassName("github-title-des")[0].style.display = "block";
     }
 
-    document.getElementById('github-title-chevron-up').onclick = function () {
-      document.getElementById("github-title-chevron-up").style.display = "none";
-      document.getElementById("github-title-chevron-down").style.display = "inline-block";
-      document.getElementsByClassName("github-title-des")[0].style.display = "none";
+    function hasClass(element, className) {
+      var regex = new RegExp('\\b' + className + '\\b');
+      do {
+        if (regex.exec(element.className || (element.target ? element.target.className : ''))) {
+          return true;
+        }
+        
+        element = element.parentNode || (element.target ? element.target.parentNode : element.target);
+      } while (element);
+      return false;
     }
+    
+    function hide(e) {
+      if (!hasClass(e, 'discussion-timeline')) {
+        document.getElementById("github-title-chevron-up").style.display = "none";
+        document.getElementById("github-title-chevron-down").style.display = "inline-block";
+        document.getElementsByClassName("github-title-des")[0].style.display = "none";
+      }
+    }
+
+    document.getElementById('github-title-chevron-up').onclick = function (){ hide(); };
+    document.getElementsByClassName('application-main')[0].onclick = function (e){ hide(e); };
 
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       document.getElementsByClassName('github-title-main-div')[0].style.display = "block";
