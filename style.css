@@ -1,0 +1,38 @@
+.github-title-main-div {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+
+.github-title-title {
+  margin: auto;
+  width: 100vw;
+  color: white;
+  text-align: center;
+  background-color: #24292e;
+}
+
+.github-title-title-text {
+  display: initial;
+}
+
+.github-title-main-div svg {
+  height: 20px;
+  color: #34d058;
+  vertical-align: middle;
+}
+
+.github-title-des {
+  background: rgba(246, 248, 250, 0.95);
+  border-bottom: 1px solid #7e7e7e69;
+  display: none;
+}
+
+.github-title-des-text {
+  width: 70vw;
+  margin: auto;
+  max-height: 200px;
+  overflow: scroll;
+  font-size: 13px !important;
+}
