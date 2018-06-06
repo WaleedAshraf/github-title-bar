@@ -1,5 +1,5 @@
 
-var regex = /(https:\/\/github.com\/).*?(issues).*?(\d)/
+var regex = /(https:\/\/github.com\/).*?(issues|pull).*?(\d)/
 $(document).ready(function () {
 
   function init() {
