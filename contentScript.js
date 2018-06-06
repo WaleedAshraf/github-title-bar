@@ -4,7 +4,6 @@ $(document).ready(function () {
 
   function init() {
     if (regex.test(window.location.href)) {
-      console.log('here3');
       var title = document.getElementsByClassName('js-issue-title')[0].innerHTML
       var des = document.getElementsByTagName('table')[0].innerHTML;
 

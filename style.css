@@ -10,13 +10,13 @@
   width: 100vw;
   color: white;
   font-size: 17px;
-  vertical-align: middle !important;
   text-align: center;
   background-color: #24292e;
 }
 
 .github-title-title-text {
   display: initial;
+  vertical-align: middle !important;
 }
 
 .github-title-main-div svg {
