@@ -11,6 +11,9 @@
     "48": "github-48.png",
     "128": "github-128.png"
   },
+  "browser_action": {
+    "default_icon": "github-48.png"
+  },
   "content_scripts": [
     {
       "matches": [
